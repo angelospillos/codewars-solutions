@@ -32,10 +32,12 @@ func FindOutlier(integers []int) int {
     
     if searchingFor == "odd"  && n % 2 != 0 {
         outlier = n
+        break
     }
       
     if searchingFor == "even"  && n % 2 == 0 {
         outlier = n
+        break
     }
   
     
