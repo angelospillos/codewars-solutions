@@ -20,15 +20,17 @@ func DuplicateEncode(word string) string {
   
   r := ""
   
-  for _, char := range word {
+  lower := strings.ToLower(word)
+  
+  for _, char := range lower {
     
-    res1 := strings.Count(strings.ToLower(word), string(char))
+    res1 := strings.Count(lower, string(char))
     
     if res1 == 1 {
       r+="("
     }
     
-     if res1 != 1 {
+    if res1 != 1 {
       r+=")"
     }
 
